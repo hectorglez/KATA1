@@ -4,7 +4,8 @@
  */
 package practicalab1;
 
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -17,7 +18,9 @@ public class PracticaLab1 {
      */
     public static void main(String[] args) {
         System.out.println("Hola mundo");
-        Person hector = new Person("Hector", "Gonzalez", new Date(94, 7, 17));
+        Calendar f1 = GregorianCalendar.getInstance();
+        f1.set(1994,7,17);
+        Person hector = new Person("Hector", "Gonzalez",f1);
         Person p1 = new Person(null, null, null);
         System.out.println(hector.getFullName());
         System.out.println(hector.getAge());
